@@ -4,14 +4,6 @@ import sqlite3
 # This is for similar searches. You can use fuzzywuzzy but that requires to install libraries
 import difflib
 
-"""
-Changes made:
-    rollback added to functions that will change the database (add_book, update_book, delete_book)
-    created a table on start up with pre-generated books (def populate_table)
-        - added a few titles to show the code work with different titles but same author and same author but different titles
-    also added more function to the delete menu option. Also included deleting by the books ID which then gives a confirmation of the book and title to delete
-"""
-
 class BookDatabase:
     def __init__(self, database_name):
         """
